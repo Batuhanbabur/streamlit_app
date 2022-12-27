@@ -56,7 +56,7 @@ perimeter = st.sidebar.slider("Target Perimeter", min_value=35910001, max_value=
 
 from joblib import load
 
-logreg_model = load('KNN_model.pickle')
+logreg_model = load('KNN_model.pkl')
 
 input_df = pd.DataFrame({
     'Area': [area],
