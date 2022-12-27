@@ -31,7 +31,7 @@ st.image("https://cdnimg.webstaurantstore.com/images/guides/658/rice-header-md.j
 # Header Ekleme
 st.header("Data Dictionary")
 
-st.markdown("- **Class**: Which type of Rice? (0 = Cammeo, 1 = Osmancik)")
+st.markdown("- **Class**: Which type of Rice?")
 st.markdown("- **Area**: Which area we're looking for")
 st.markdown("- **Convex**: What specific angle of convex it has")
 st.markdown("- **Major_axis_length**: It's major axis length")
@@ -56,7 +56,7 @@ perimeter = st.sidebar.slider("Target Perimeter", min_value=35910001, max_value=
 
 from joblib import load
 
-logreg_model = load('KNN_model.pkl')
+logreg_model = load('KNN_model.pickle')
 
 input_df = pd.DataFrame({
     'Area': [area],
