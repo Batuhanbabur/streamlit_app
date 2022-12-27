@@ -38,7 +38,7 @@ st.markdown("- **Major_axis_length**: It's major axis length")
 st.markdown("- **Perimeter**: What specific perimeter the plant has")
 
 # Pandasla veri setini okuyalım
-df = pd.read_csv("/Users/batuhanbabur/Desktop/Rice_Cammeo_Osmancik.csv")
+df = pd.read_csv("Rice_Cammeo_Osmancik.csv")
 #tanımlandı
 
 st.table(df.sample(10, random_state=42))
@@ -56,7 +56,7 @@ perimeter = st.sidebar.slider("Target Perimeter", min_value=35910001, max_value=
 
 from joblib import load
 
-logreg_model = load('/Users/batuhanbabur/Desktop/KNN_model.pkl')
+logreg_model = load('KNN_model.pkl')
 
 input_df = pd.DataFrame({
     'Area': [area],
